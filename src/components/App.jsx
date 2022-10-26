@@ -1,11 +1,12 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { selectError, selectIsLoading } from "redux/selectors";
+import { fetchContacts } from "redux/contactsThunks/contactsOperations";
+
 import Section from "./Section/Section";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "./Filter/Filter";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchContacts } from "redux/operations";
-import { selectError, selectIsLoading } from "redux/selectors";
 
 export default function App() {
   const dispatch = useDispatch();
